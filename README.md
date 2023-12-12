@@ -56,3 +56,32 @@ This is the repo on setting up a demo trading bot to execute custom trading stra
    ```shell
    sudo apt install git
    ```
+
+4. Install PM2 to monitor and run NodeJs application
+
+   - Installing PM2
+
+   ```shell
+   npm install pm2 -g
+   ```
+
+   - Run NodeJs application.
+     PM2 will automatically starts the application when it crashes or killed for any reason.
+
+   ```shell
+   pm2 start app.js
+   ```
+
+5. Copy Files To EC2 with SCP
+
+```shell
+scp -i /path/to/private-key.pem /path/to/local/file username@ec2-public-dns:/path/to/destination/
+```
+
+## Run code on EC2
+
+1. Uses PM2 to run app.js on EC2
+
+```shell
+pm2 start app.js
+```
