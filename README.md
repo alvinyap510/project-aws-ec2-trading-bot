@@ -10,7 +10,7 @@ This is the repo on setting up a demo trading bot to execute custom trading stra
 2. Select Launch Intstance
    ![Select Launch Instance](img/launch-instance.png)
 
-3. Select your desired OS. In here Ubuntu was selected for its beginner friendlyness
+3. Select your desired OS. In here Ubuntu was selected for its beginner friendlyness, and also it seems like only Amazon Linux and Ubuntu supports cloud shell
    ![Select OS](img/select-os.png)
 
 4. Generate a keypair to SSH into the EC2 instance from your own machine. Store the .pem file in a secure place
@@ -34,3 +34,25 @@ This is the repo on setting up a demo trading bot to execute custom trading stra
 
 6. Select storage -> by default it provides an 8GB EBS volume
    ![Configure Storage](img/configure-storage.png)
+
+## Install Required Software on EC2
+
+1. Update Instance
+
+   ```shell
+   sudo apt update
+   sudo apt upgrade -y
+   ```
+
+2. Install NodeJs and NPM
+
+   ```shell
+   sudo apt install nodejs
+   sudo apt install npm
+   ```
+
+3. Install git to interact with github
+
+   ```shell
+   sudo apt install git
+   ```
